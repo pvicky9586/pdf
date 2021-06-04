@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Livewire\ComponentPdf;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,8 +18,20 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+
+Route::get('/livewire-pdf', function () {
+    return view('livewire.conponent-pdf');
+});
+
+
+
 Route::get('/upload', 'App\Http\Controllers\PdfController@upload')->name('upload');
 Route::post('/upload', 'App\Http\Controllers\PdfController@guardar')->name('guardar');
 // Route::get('/form', [App\Http\Controller\PdfController::class,'subirpdf'])->name('subirpdf');
 //Route::post('/guardar', [App\Http\Controller\PdfController::class,'gurdar'])->name('guardar');
 Route::get('/download', 'App\Http\Controllers\PdfController@download')->name('download');
+
+
+Route::get('/downloadpdf',[ComponentPdf::class,'downloadpdf']);
