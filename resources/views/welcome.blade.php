@@ -19,15 +19,22 @@
 
 <div class="container" align="text-center">
     <div>
-        <label class="display-4 text-center">Download's pdf in Laravel-Livewire</label>
-        <img src="{{asset('images/laravel-livewire.jpg')}}">
+        <label class="display-4 text-center">Download's pdf</label>
     </div>
+    <div align="center">
+        <img src="{{asset('images/laravel-livewire.jpg')}}" height="200">&nbsp;&nbsp; <img src="{{asset('images/mysql-2.png')}}" height="200">
+    </div>
+        
+    </div><br><br>
     <br><br><br>
     <div align="center" class="display-4">
    
-            <a href="{{route('download')}}"  style=" color: red;" title="Descargar">laravel</a>
+        <a href="{{route('download')}}"  style=" color: red;" title="Descargar">Laravel</a>
                     &nbsp;&nbsp;&nbsp;&nbsp;       
-             <a href="{{url('downloadpdf')}}"  style=" color:  #9644a4;" title="Descargar">Livewire</a>&nbsp;&nbsp;&nbsp;            
+        <a href="{{url('downloadpdf')}}"  style=" color:  #9644a4;" title="Descargar">Livewire</a>
+        <div>
+             <a href="{{url('pdfBD')}}"  class="text-primary" title="Descargar">Livewire & BD</a>
+        </div>&nbsp;&nbsp;&nbsp;            
     </div>
 </div>
 

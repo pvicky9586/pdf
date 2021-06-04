@@ -34,4 +34,11 @@ Route::post('/upload', 'App\Http\Controllers\PdfController@guardar')->name('guar
 Route::get('/download', 'App\Http\Controllers\PdfController@download')->name('download');
 
 
+
+
+
+
+
+Route::get('/pdfBD',[ComponentPdf::class,'pdfbd']);
+
 Route::get('/downloadpdf',[ComponentPdf::class,'downloadpdf']);
